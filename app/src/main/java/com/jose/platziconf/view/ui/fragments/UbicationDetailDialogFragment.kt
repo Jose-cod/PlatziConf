@@ -1,4 +1,4 @@
-package com.jose.platziconf.ui.fragments
+package com.jose.platziconf.view.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,14 +11,14 @@ import com.jose.platziconf.R
 /**
  * A simple [Fragment] subclass.
  */
-class ScheduleFragment : Fragment() {
+class UbicationDetailDialogFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_schedule, container, false)
+        return inflater.inflate(R.layout.fragment_ubication_detail_dialog, container, false)
     }
 
 }
