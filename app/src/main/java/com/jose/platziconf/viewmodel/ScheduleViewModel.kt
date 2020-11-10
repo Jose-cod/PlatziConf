@@ -10,7 +10,7 @@ import java.lang.Exception
 class ScheduleViewModel: ViewModel(){
     val firestoreService=FirestoreService()
     var listSchedule:MutableLiveData<List<Conference>> = MutableLiveData()
-    lateinit var isLoading:MutableLiveData<Boolean>
+    var isLoading = MutableLiveData<Boolean>()
 
     fun refresh(){
         getScheduleFromFirebase()
@@ -19,13 +19,11 @@ class ScheduleViewModel: ViewModel(){
     fun getScheduleFromFirebase(){
         firestoreService.getSchedule(object : Callback<List<Conference>>{
             override fun onSucces(result: List<Conference>?) {
-                TODO("Not yet implemented")
                 listSchedule.postValue(result)
                 processFinished()
             }
 
             override fun onFailed(exception: Exception) {
-                TODO("Not yet implemented")
                 processFinished()
             }
 

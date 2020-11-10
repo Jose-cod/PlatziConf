@@ -10,7 +10,7 @@ import java.lang.Exception
 class SpeakerViewModel: ViewModel() {
     val firestoreService= FirestoreService()
     var listSpeaker: MutableLiveData<List<Speaker>> = MutableLiveData()
-    lateinit var isLoading: MutableLiveData<Boolean>
+    var isLoading = MutableLiveData<Boolean>()
 
     fun refresh(){
         getSpeakerFromFirebase()
@@ -19,13 +19,11 @@ class SpeakerViewModel: ViewModel() {
     fun getSpeakerFromFirebase(){
         firestoreService.getSpeakers(object : Callback<List<Speaker>> {
             override fun onSucces(result: List<Speaker>?) {
-                TODO("Not yet implemented")
                 listSpeaker.postValue(result)
                 processFinished()
             }
 
             override fun onFailed(exception: Exception) {
-                TODO("Not yet implemented")
                 processFinished()
             }
 

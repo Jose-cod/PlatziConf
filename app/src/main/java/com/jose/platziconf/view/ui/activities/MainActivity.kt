@@ -4,14 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
-import com.google.firebase.firestore.FirebaseFirestore
 import com.jose.platziconf.R
-import com.jose.platziconf.model.Conference
-import com.jose.platziconf.model.Speaker
 import kotlinx.android.synthetic.main.activity_main.*
-import org.json.JSONArray
-import org.json.JSONObject
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,9 +16,6 @@ class MainActivity : AppCompatActivity() {
         setActionBar(findViewById(R.id.toolBarMain))
         configNav()
         //
-
-
-
 
     }
     fun configNav(){
